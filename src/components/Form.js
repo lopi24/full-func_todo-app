@@ -1,4 +1,5 @@
 import styles from "../style.module.css";
+import shortid from 'shortid';
 
 const Form = ({ todo, setTodo, todoList, setTodoList }) => {
     const handleChange = (e) => {
@@ -6,7 +7,7 @@ const Form = ({ todo, setTodo, todoList, setTodoList }) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        setTodoList([...todoList, todo])
+        setTodoList([...todoList, { name: todo, id: shortid.generate() }])
     }
     return (
         <div className={styles.todoForm}>
