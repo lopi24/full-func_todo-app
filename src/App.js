@@ -20,6 +20,7 @@ function App() {
       />
       <TodoList
         todoList={todoList}
+        setTodoList={setTodoList}
       />
     </div>
   );

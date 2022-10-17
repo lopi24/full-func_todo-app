@@ -8,6 +8,7 @@ const Form = ({ todo, setTodo, todoList, setTodoList }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setTodoList([...todoList, { name: todo, id: shortid.generate() }])
+        setTodo("");
     }
     return (
         <div className={styles.todoForm}>
